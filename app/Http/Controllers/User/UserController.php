@@ -18,13 +18,13 @@ class UserController extends Controller
     return $user;
   }
 
-  // public function post(Request $request){
-  //   $user = new User();
-  //   $user->user = $request->user;
-  //   $user->id = Auth::id();
-  //   $user->save();
-  //   return response("OK", 200);
-  // }
+  public function post(Request $request){
+    $user = new User();
+    $user->user = $request->user;
+    $user->id = Auth::id();
+    $user->save();
+    return response("OK", 200);
+  }
 
   // public function delete($id){
   //   User::find($id)->delete();
